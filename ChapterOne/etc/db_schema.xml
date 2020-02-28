@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="magenest_rules" resource="default" engine="innodb" comment="magenest_rules">
+        <column xsi:type="int" name="id" padding="11" unsigned="false" nullable="false" identity="true" comment="id"/>
+        <column xsi:type="varchar" name="title" length="50" comment="title"/>
+        <column xsi:type="varchar" name="status" length="10" comment="status"/>
+        <column xsi:type="int" name="rule_type" padding="11" comment="rule_type"/>
+        <column xsi:type="text" name="conditions_serialized" comment="conditions_serialized"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
