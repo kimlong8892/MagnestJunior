@@ -6,6 +6,8 @@
         <column xsi:type="varchar" name="status" length="10" comment="status"/>
         <column xsi:type="int" name="rule_type" padding="11" comment="rule_type"/>
         <column xsi:type="text" name="conditions_serialized" comment="conditions_serialized"/>
+        <column xsi:type="timestamp" name="after_load" comment="after_load" />
+        <column xsi:type="timestamp" name="after_save" comment="after_save" />
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="id"/>
         </constraint>

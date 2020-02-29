@@ -15,6 +15,7 @@ namespace Magenest\ChapterOne\Model;
 
 class MagenestRule extends \Magento\Framework\Model\AbstractModel
 {
+    protected $_eventPrefix = 'magenest_rule';
     protected function _construct()
     {
         $this->_init('Magenest\ChapterOne\Model\ResourceModel\MagenestRule');

@@ -19,4 +19,9 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->_init("Magenest\ChapterOne\Model\MagenestRule",
                 "Magenest\ChapterOne\Model\ResourceModel\MagenestRule");
     }
+    public function getItems()
+    {
+        $this->addFieldToFilter('status', 'pending');
+        return parent::getItems();
+    }
 }
