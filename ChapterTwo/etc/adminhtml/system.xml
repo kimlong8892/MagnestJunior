@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=
+    "urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="10">
+            <label>Magenest</label>
+        </tab>
+        <section id="clock" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Clock</label>
+            <tab>magenest</tab>
+            <resource>Magenest_Color::clock</resource>
+            <group id="config_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="title_clock" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Title Clock</label>
+                </field>
+                <field id="list_size" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>List Mode</label>
+                    <source_model>Magenest\ChapterTwo\Model\Config\Source\ListSize</source_model>
+                </field>
+                <field id="clock_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Color Clock</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Color</frontend_model>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Text Clock</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Color</frontend_model>
+                </field>
+                <field id="type_clock" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Clock Type</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Adminhtml\Form\Field\Types</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

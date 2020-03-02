@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=
+    "urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::countdown" title="Magenest Countdown" sortOrder="270" translate="true">
+                    <resource id="Magenest_Movie::Countdownmanagement" title="Count Downmanagement" translate="true"/>
+                    <resource id="Magenest_Movie::clockconfig" title="Clock Config" translate="true"/>
+                </resource>
+                <resource id="Magenest_Color::clock" title="Configuration Clock Section" translate="true" sortOrder="280"/>
+            </resource>
+        </resources>
+    </acl>
+</config>

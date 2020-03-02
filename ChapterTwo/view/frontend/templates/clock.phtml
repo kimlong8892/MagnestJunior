@@ -1,0 +1,26 @@
+<div class="clock">
+    <h1 class="content"></h1>
+    <p style="padding: 0; margin: 0;"><?= $block->getConfigClock()['title_clock'] ?></p>
+</div>
+<style>
+    .clock{
+        text-align: center;
+        background-color: <?= $block->getConfigClock()['clock_color'] ?>;
+    }
+    .clock .content{
+        color: <?= $block->getConfigClock()['text_color'] ?>;
+        font-weight: bold;
+        margin: 0;
+    }
+</style>
+<script>
+    require(['jquery'], function ($) {
+        $(document).ready(function () {
+            setInterval(function () {
+                var dt = new Date();
+                var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                $(".clock .content").html(time);
+            }, 1000);
+        });
+    });
+</script>
