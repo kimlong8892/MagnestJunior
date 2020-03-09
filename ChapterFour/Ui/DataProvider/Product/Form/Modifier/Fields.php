@@ -21,8 +21,6 @@ use Magento\Ui\Component\Form\Element\Select;
 use Magento\Ui\Component\Form\Field;
 
 
-
-
 class Fields extends AbstractModifier
 {
     public function modifyMeta(array $meta)

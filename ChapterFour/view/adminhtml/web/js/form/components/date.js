@@ -8,10 +8,9 @@ define([
             options: {
                 showsDate: true,
                 beforeShowDay: function (date) {
-                    //var array = ['8', '9', '10', 11, 12];
                     var array = ["08","09","10","11","12"];
                     var string = $.datepicker.formatDate('dd', date);
-                    return [ array.indexOf(string) != -1 ]
+                    return [ array.indexOf(string) != -1 ];
                 },
             },
 
