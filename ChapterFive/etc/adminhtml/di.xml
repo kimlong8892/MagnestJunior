@@ -14,7 +14,21 @@
             </argument>
         </arguments>
     </virtualType>
+    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Listing\Modifier\Pool"
+                 type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="newFields" xsi:type="array">
+                    <item name="class" xsi:type="string">
+                        Magenest\ChapterFive\Ui\DataProvider\Product\Listing\Modifier\Column
+                    </item>
+                    <item name="sortOrder" xsi:type="number">110</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
     <type name="Magento\Catalog\Ui\DataProvider\Product\ProductDataProvider">
-        <plugin name="custom_show_attribute_in_product_listing" type="Magenest\ChapterFive\Plugin\AddFiledProductListing" />
+        <plugin name="custom_show_attribute_in_product_listing"
+                type="Magenest\ChapterFive\Plugin\AddFiledProductListing"/>
     </type>
 </config>

@@ -22,10 +22,13 @@ class AttributeVarchar extends AbstractModifier
 
     public function modifyData(array $data)
     {
-        if(isset($data[array_key_first($data)]['product']['sample_varchar'])) {
-            $temp = explode("+",$data[array_key_first($data)]['product']['sample_varchar']);
-            $data[array_key_first($data)]['product']['sample_varchar'] = $temp[0];
-            $data[array_key_first($data)]['product']['sample_varchar'] = $temp[0];
+        $firstKey = array_keys($data)[0];
+        if($firstKey != ''){
+            if(isset($data[$firstKey]['product']['sample_varchar'])) {
+                $temp = explode("+",$data[$firstKey]['product']['sample_varchar']);
+                $data[$firstKey]['product']['sample_varchar'] = $temp[0];
+                $data[$firstKey]['product']['sample_varchar'] = $temp[0];
+            }
         }
         return $data;
     }
