@@ -5,7 +5,7 @@
                  type="Magento\Ui\DataProvider\Modifier\Pool">
         <arguments>
             <argument name="modifiers" xsi:type="array">
-                <item name="newFields" xsi:type="array">
+                <item name="AttributeVarchar" xsi:type="array">
                     <item name="class" xsi:type="string">
                         Magenest\ChapterFive\Ui\DataProvider\Product\Form\Modifier\AttributeVarchar
                     </item>
@@ -18,7 +18,7 @@
                  type="Magento\Ui\DataProvider\Modifier\Pool">
         <arguments>
             <argument name="modifiers" xsi:type="array">
-                <item name="newFields" xsi:type="array">
+                <item name="ColumnShow" xsi:type="array">
                     <item name="class" xsi:type="string">
                         Magenest\ChapterFive\Ui\DataProvider\Product\Listing\Modifier\Column
                     </item>

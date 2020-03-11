@@ -11,13 +11,9 @@
  */
 
 namespace Magenest\ChapterOne\Observer;
-
-
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Event\Observer as EventObserver;
 use Magenest\ChapterOne\Model\ResourceModel\MagenestRule;
-
-
 
 class AfterLoadAndSaveRule implements ObserverInterface
 {
@@ -41,14 +37,13 @@ class AfterLoadAndSaveRule implements ObserverInterface
     {
         $date = $this->date->gmtDate();
         $modelRule = $observer->getDataObject();
-        if($observer->getEvent()->getName() == "magenest_rule_load_after"){
+        $eventName = $observer->getEvent()->getName();
+        if($eventName == "magenest_rule_load_after"){
             $modelRule->setAfterLoad($date);
             $this->magenestRule->save($modelRule);
-        }
-        else {
+        } else if($eventName == "magenest_rule_save_after") {
             $modelRule->setAfterSave($date);
-            if($this->isSave == false)
-            {
+            if(!$this->isSave) {
                 $this->isSave = true;
                 $this->magenestRule->save($modelRule);
             }

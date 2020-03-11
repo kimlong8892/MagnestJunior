@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magenest_ChapterSix::rule"
+             title="Rule Management"
+             module="Magenest_ChapterSix"
+             sortOrder="1"
+             resource="Magenest_ChapterSix::Rule"/>
+        <add id="Magenest_ChapterSix::rule_show"
+             title="show"
+             module="Magenest_ChapterSix"
+             sortOrder="0"
+             parent="Magenest_ChapterSix::rule"
+             action="rule/rule/show"
+             resource="Magenest_ChapterSix::rule_show"/>
+    </menu>
+</config>
