@@ -33,5 +33,6 @@ class Test extends Action
 //        $this->ruleRepository->save();
 //        $modelRule3 = $this->ruleRepository->loadById(3);
 //        $modelRule4 = $this->ruleRepository->loadById(4);
+
     }
 }
